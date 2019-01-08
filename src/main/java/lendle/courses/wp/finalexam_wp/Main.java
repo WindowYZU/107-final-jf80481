@@ -5,7 +5,10 @@
  */
 package lendle.courses.wp.finalexam_wp;
 
+import java.awt.FlowLayout;
+import java.awt.PopupMenu;
 import javax.swing.DefaultListModel;
+import javax.swing.JDesktopPane;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 
@@ -13,6 +16,8 @@ import javax.swing.JOptionPane;
  *
  * @author lendle
  */
+import javax.swing.JFrame;
+import javax.swing.WindowConstants;
 public class Main extends javax.swing.JFrame {
 
     /**
@@ -106,7 +111,8 @@ public class Main extends javax.swing.JFrame {
         DefaultListModel model = (DefaultListModel) this.jList1.getModel();
         if (model.contains(title)) {
             //Q1: 開啟 message dialog （10%）
-            
+           JOptionPane.showInternalMessageDialog(getContentPane(), model);
+          
             ////////////////////
             return;
         }
@@ -114,6 +120,8 @@ public class Main extends javax.swing.JFrame {
         model.addElement(title);
         //Q2: 建立 TaskFrame（等同於 JInternalFrame）
         //加到 jDesktopPane1 (20%)
+        TaskFrame taskFrame=new TaskFrame();
+        jDesktopPane1.add(taskFrame);
         
         ///////////////////////////////////////
     }//GEN-LAST:event_buttonNewActionPerformed
