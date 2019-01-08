@@ -111,7 +111,7 @@ public class Main extends javax.swing.JFrame {
         DefaultListModel model = (DefaultListModel) this.jList1.getModel();
         if (model.contains(title)) {
             //Q1: 開啟 message dialog （10%）
-            JOptionPane.showMessageDialog(getContentPane(), model);
+            JOptionPane.showMessageDialog(getContentPane(), "重複");
             
             ////////////////////
             return;
